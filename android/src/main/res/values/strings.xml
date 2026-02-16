@@ -1,0 +1,4 @@
+<resources>
+  <!-- App should override this value -->
+  <string name="google_web_client_id">__REPLACE_IN_APP__</string>
+</resources>

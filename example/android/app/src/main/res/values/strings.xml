@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ReactNativeAuthExample</string>
+    <string name="google_web_client_id">REPLACE_IN_APP</string>
+</resources>
