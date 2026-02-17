@@ -14,3 +14,12 @@ export interface AppleCredential {
     email?: string | null
     fullName?: AppleFullName | null
 }
+
+export interface GoogleCredential {
+    email?: string | null
+    displayName?: string | null
+    familyName?: string | null
+    givenName?: string | null
+    idToken: string
+    userId: string
+}

@@ -1,4 +1,4 @@
-import type { AppleCredential } from './types'
+import type { AppleCredential, GoogleCredential } from './types'
 import ReactNativeAuth from './NativeReactNativeAuth'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
@@ -86,6 +86,6 @@ export const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({
 export function signInWithApple(): Promise<AppleCredential> {
     return ReactNativeAuth.signInWithApple()
 }
-export function signInWithGoogle(): Promise<any> {
+export function signInWithGoogle(): Promise<GoogleCredential> {
     return ReactNativeAuth.signInWithGoogle()
 }
