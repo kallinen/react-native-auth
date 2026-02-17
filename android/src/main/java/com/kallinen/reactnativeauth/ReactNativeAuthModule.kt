@@ -4,7 +4,7 @@ import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import com.facebook.react.bridge.*
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import kotlinx.coroutines.*
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 
@@ -23,11 +23,8 @@ class ReactNativeAuthModule(private val reactContext: ReactApplicationContext) :
     val credentialManager = CredentialManager.create(activity)
     val serverClientId = reactContext.getString(R.string.google_web_client_id)
 
-    val googleIdOption =
-      GetGoogleIdOption.Builder()
-        .setServerClientId(serverClientId)
-        .setFilterByAuthorizedAccounts(false)
-        .build()
+    val googleIdOption = GetSignInWithGoogleOption.Builder(serverClientId)
+      .build()
 
     val request = GetCredentialRequest.Builder().addCredentialOption(googleIdOption).build()
 
