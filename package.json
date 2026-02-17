@@ -1,6 +1,6 @@
 {
   "name": "@kallinen/react-native-auth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Small library that provides Apple & Android sign-in capabilities",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
